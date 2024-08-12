@@ -1,0 +1,29 @@
+
+
+
+
+loss:
+  type: IoULoss
+  args:
+    eps: 0.0000007
+
+
+
+lr_scheduler:
+  type: CosineAnnealingScheduler
+  args:
+    n_epochs: 251
+    start_anneal: 30
+
+
+optimizer:
+  type: RAdam
+  args:
+    lr: 0.001
+    weight_decay: 0.0002
+  decoder:
+    lr: 0.003
+    weight_decay: 0.0003
+  encoder:
+    lr: 7.0e-05
+    weight_decay: 3.0e-05
